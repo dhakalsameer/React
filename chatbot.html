@@ -61,18 +61,17 @@
             sender: 'robot'
         }];
 
-        const chatMessageComponents = chatMessages.map((chatMessage) =>{
+        return (
+          <>
+            <ChatInput />
+            {chatMessages.map((chatMessage) =>{
             return (
                 <ChatMessage 
                     message={chatMessage.message}
                     sender={chatMessage.sender}
                 />
             );
-        });
-        return (
-          <>
-            <ChatInput />
-            {chatMessageComponents}
+        })}
           </>
         );
       }
